@@ -84,9 +84,11 @@ def line_tracking(rs, frame, sensor, prams, x):
 
 
         if mx > 160 + padding + 90:  # 심하게 오른쪽일 경우 자리에서 방향 전환
-            print(">> parking 실행 중...")
-            parking(rs)
-            print(">> parking 종료, 다시 라인 따라감")
+            print("hardright 실행")
+            hardright(rs, tspeed)
+            # print(">> parking 실행 중...")
+            # parking(rs)
+            # print(">> parking 종료, 다시 라인 따라감")
         elif mx > 160 + padding:  # 원을 그리며 오른쪽으로 회전
             print("right 실행")
             right(rs, tspeed)
